@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="pt-br">
+  <head></head>
+    <!--font awesome-->
+    <script src="https://kit.fontawesome.com/9860e3b8b6.js" crossorigin="anonymous"></script>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+    <title>Loja Virtual</title>
+
+    <!--favicon - gerador de ícone-->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <style>
+        p.truncate-3l{
+            display: -webkit-box;
+            -webkit-line-clamp:3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+  </head>
+  <body style="min-width:372px;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info border-bottom shadow-sm mb-3">
+        <div class="container">
+            <a class="navbar-brand" href="#"><strong>Donuts Online</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse menu-right">
+                <ul class="navbar-nav flex-glow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="">Principal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="contato.html">Contato</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="align-self-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="cadastro.html">Cadastrar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="login.html">Entrar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> 
+
+    <header class="container">
+        <div id="carouselMain" class="carousel carousel-dark slide" data-ride="carousel">
+            <ol class="carousel-indicators" >
+                <li data-target="#carouselMain" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselMain" data-slide-to="1"></li>
+                <li data-target="#carouselMain" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active text-center" data-intervel="3000">
+                    <img src="img/m_donuts02.jpg" alt="" class="img-fluid d-none d-md-block">
+                </div>
+                <div class="carousel-item text-center" data-intervel="3000">
+                    <img src="img/m_donuts03.jpg" alt="" class="img-fluid d-none d-md-block">
+                </div>
+                <div class="carousel-item text-center" data-intervel="3000">
+                    <img src="img/m_donuts04.jpg" alt="" class="img-fluid d-none d-md-block">
+                </div>
+            </div>
+            <a class="carousel-control-prev" role="button" data-slide="prev" href="#carouselMain">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" role="button" data-slide="next" href="#carouselMain">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+        <hr class="mt-3">
+    </header>
+    
+    <main class="mb-5 pb-5 mb-md-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-5">
+                    <form class="justify-content-center justify-md-start mb-3 mb-md-0">
+                        <div class="input-group input-group-sm">
+                            <input type="text" class="form-control" placeholder="Digite aqui o que procura">
+                            <button class="btn-info">Buscar</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-12 col-md-7">
+                    <div class="d-flex flex-row-reverse justify-content-center justify-content-md-start">
+                        <form class="ml-3 d-inline-block">
+                            <select class="form-select form-select-sm">
+                                <option>Ordernar pelo nome</option>
+                                <option>Ordernar pelo menor preço</option>
+                                <option>Ordernar pelo maior preço</option>
+                            </select>
+                        </form>
+                        <nav class="d-inline-block">
+                            <ul class="pagination pagination-sm my-0">
+                                <li class="page-item">
+                                    <button class="page-link">1</button>
+                                </li>
+                                <li class="page-item">
+                                    <button class="page-link">2</button>
+                                </li>
+                                <li class="page-item">
+                                    <button class="page-link">3</button>
+                                </li>
+                                <li class="page-item">
+                                    <button class="page-link">4</button>
+                                </li>
+                                <li class="page-item">
+                                    <button class="page-link">5</button>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        <hr class="mt-3">    
+        </div>
+        <div class="row g-3">
+           <div class="col-12 col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+               <div class="card text-center bg-light">
+                   <a href="" class="position-absolute end-0 p-2 text-danger">
+                    <i class="far fa-heart"></i>
+                   </a>
+                   <img src="img/card01.jfif" class="card-img-top">
+                   <div class="card-header">
+                        R$ 5,00
+                   </div>
+                   <div class="card-body">
+                    <h5 class="card-title">Chocolate</h5>
+                    <p class="card-text truncate-3l" >Um delicioso donuts coberto com chocolate e granulado.<p>
+                   </div>
+                   <div class="card-footer">
+                        <form class="d-block">
+                            <button class="btn btn-info">
+                                Adicionar ao Carrinho
+                            </button>
+                        </form>
+                        <small class="text-black">20 unidades em estoque</small>
+                   </div>
+               </div>
+            </div>   
+            <div class="col-12 col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+                <div class="card text-center bg-light">
+                    <a href="" class="position-absolute end-0 p-2 text-danger">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                    <img src="img/card02.jfif" class="card-img-top">
+                    <div class="card-header">
+                         R$ 5,00
+                    </div>
+                    <div class="card-body">
+                     <h5 class="card-title">Doce de Leite</h5>
+                     <p class="card-text truncate-3l">Um delicioso donuts coberto e recheado com doce de leite.<p>
+                    </div>
+                    <div class="card-footer">
+                         <form class="d-block">
+                             <button class="btn btn-info">
+                                 Adicionar ao Carrinho
+                             </button>
+                         </form>
+                         <small class="text-black">10 unidades em estoque</small>
+                    </div>
+                </div>
+             </div>
+             <div class="col-12 col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+                <div class="card text-center bg-light">
+                    <a href="" class="position-absolute end-0 p-2 text-danger">
+                     <i class="far fa-heart"></i>
+                    </a>
+                    <img src="img/card03.jfif" class="card-img-top">
+                    <div class="card-header">
+                         R$ 5,00
+                    </div>
+                    <div class="card-body">
+                     <h5 class="card-title">Chocolate com Morango</h5>
+                     <p class="card-text truncate-3l">Um delicioso donuts coberto com chocolate e pedaços de morango.<p>
+                    </div>
+                    <div class="card-footer">
+                         <form class="d-block">
+                             <button class="btn btn-info">
+                                 Adicionar ao Carrinho
+                             </button>
+                         </form>
+                         <small class="text-danger"><strong>Produto Esgotado</strong></small>
+
+                    </div>
+                </div>
+             </div>
+             <div class="col-12 col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+                <div class="card text-center bg-light">
+                    <a href="" class="position-absolute end-0 p-2 text-danger">
+                     <i class="far fa-heart"></i>
+                    </a>
+                    <img src="img/card04.jpg" class="card-img-top">
+                    <div class="card-header">
+                         R$ 5,00
+                    </div>
+                    <div class="card-body">
+                     <h5 class="card-title">Donuts de Oreo</h5>
+                     <p class="card-text truncate-3l">Um delicioso donuts coberto de oreo.<p>
+                    </div>
+                    <div class="card-footer">
+                         <form class="d-block">
+                             <button class="btn btn-info">
+                                 Adicionar ao Carrinho
+                             </button>
+                         </form>
+                         <small class="text-black">20 unidades em estoque</small>
+                    </div>
+                </div>
+             </div>   
+             <div class="col-12 col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+                <div class="card text-center bg-light">
+                    <a href="" class="position-absolute end-0 p-2 text-danger">
+                     <i class="far fa-heart"></i>
+                    </a>
+                    <img src="img/card05.jpg" class="card-img-top">
+                    <div class="card-header">
+                         R$ 5,00
+                    </div>
+                    <div class="card-body">
+                     <h5 class="card-title">Donuts de limão</h5>
+                     <p class="card-text truncate-3l">Um delicioso donuts coberto com creme de limão.<p>
+                    </div>
+                    <div class="card-footer">
+                         <form class="d-block">
+                             <button class="btn btn-info">
+                                 Adicionar ao Carrinho
+                             </button>
+                         </form>
+                         <small class="text-black">30 unidades em estoque</small>
+                    </div>
+                </div>
+             </div> 
+             <div class="col-12 col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+                <div class="card text-center bg-light">
+                    <a href="" class="position-absolute end-0 p-2 text-danger">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                    <img src="img/card06.jfif" class="card-img-top">
+                    <div class="card-header">
+                         R$ 5,00
+                    </div>
+                    <div class="card-body">
+                     <h5 class="card-title">Donuts de Abacaxi</h5>
+                     <p class="card-text truncate-3l">Um delicioso donuts coberto com calda de abacaxi.<p>
+                    </div>
+                    <div class="card-footer">
+                         <form class="d-block">
+                             <button class="btn btn-info">
+                                 Adicionar ao Carrinho
+                             </button>
+                         </form>
+                         <small class="text-black">10 unidades em estoque</small>
+                    </div>
+                </div>
+             </div> 
+             <div class="col-12 col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+               <div class="card text-center bg-light">
+                   <a href="" class="position-absolute right-0 p-2 text-danger">
+                    <i class="far fa-heart"></i>
+                   </a>
+                   <img src="img/card07.jfif" class="card-img-top">
+                   <div class="card-header">
+                        R$ 5,00
+                   </div>
+                   <div class="card-body">
+                    <h5 class="card-title">Donuts de Coco</h5>
+                    <p class="card-text">Um delicioso donuts coberto com coco ralado.<p>
+                   </div>
+                   <div class="card-footer">
+                        <form class="d-block">
+                            <button class="btn btn-info">
+                                Adicionar ao Carrinho
+                            </button>
+                        </form>
+                        <small class="text-black">20 unidades em estoque</small>
+                   </div>
+               </div>
+            </div>   
+            <div class="col-12 col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+                <div class="card text-center bg-light">
+                    <a href="" class="position-absolute right-0 p-2 text-danger">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                    <img src="img/card08.jpg" class="card-img-top">
+                    <div class="card-header">
+                         R$ 5,00
+                    </div>
+                    <div class="card-body">
+                     <h5 class="card-title">Donuts de M&M</h5>
+                     <p class="card-text truncate-3l">Um delicioso donutos coberto com M&M.<p>
+                    </div>
+                    <div class="card-footer">
+                         <form class="d-block">
+                             <button class="btn btn-info">
+                                 Adicionar ao Carrinho
+                             </button>
+                         </form>
+                         <small class="text-black">5 unidades em estoque</small>
+                    </div>
+                </div>
+             </div>
+             <div class="col-12 col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+                <div class="card text-center bg-light">
+                    <a href="" class="position-absolute right-0 p-2 text-danger">
+                     <i class="far fa-heart"></i>
+                    </a>
+                    <img src="img/card09.png" class="card-img-top">
+                    <div class="card-header">
+                         R$ 5,00
+                    </div>
+                    <div class="card-body">
+                     <h5 class="card-title">Donuts de KitKat</h5>
+                     <p class="card-text truncate-3l">Um delicioso donutos coberto com KitKat.<p>
+                    </div>
+                    <div class="card-footer">
+                         <form class="d-block">
+                             <button class="btn btn-info">
+                                 Adicionar ao Carrinho
+                             </button>
+                         </form>
+                         <small class="text-black">20 unidades em estoque</small>
+                    </div>
+                </div>
+             </div>
+             <div class="col-12 col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+                <div class="card text-center bg-light">
+                    <a href="" class="position-absolute right-0 p-2 text-danger">
+                     <i class="far fa-heart"></i>
+                    </a>
+                    <img src="img/card010.jpg" class="card-img-top">
+                    <div class="card-header">
+                         R$ 5,00
+                    </div>
+                    <div class="card-body">
+                     <h5 class="card-title">Donuts de Morango</h5>
+                     <p class="card-text truncate-3l">Um delicioso donuts de morango com granulados.<p>
+                    </div>
+                    <div class="card-footer">
+                         <form class="d-block">
+                             <button class="btn btn-info">
+                                 Adicionar ao Carrinho
+                             </button>
+                         </form>
+                         <small class="text-danger"><strong>Produto Esgotado</strong></small>
+                    </div>
+                </div>
+             </div>   
+             <div class="col-12 col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+                <div class="card text-center bg-light">
+                    <a href="" class="position-absolute right-0 p-2 text-danger">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                    <img src="img/card011.jpg" class="card-img-top">
+                    <div class="card-header">
+                         R$ 5,00
+                    </div>
+                    <div class="card-body">
+                     <h5 class="card-title">Donuts de Maracujá</h5>
+                     <p class="card-text truncate-3l">Um delicioso donuts coberto com calda de maracujá.<p>
+                    </div>
+                    <div class="card-footer">
+                         <form class="d-block">
+                             <button class="btn btn-info">
+                                 Adicionar ao Carrinho
+                             </button>
+                         </form>
+                         <small class="text-black">8 unidades em estoque</small>
+                    </div>
+                </div>
+             </div> 
+             <div class="col-12 col-xl-2 col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
+                <div class="card text-center bg-light">
+                    <a href="" class="position-absolute right-0 p-2 text-danger">
+                     <i class="far fa-heart"></i>
+                    </a>
+                    <img src="img/card012.jfif" class="card-img-top">
+                    <div class="card-header">
+                         R$ 5,00
+                    </div>
+                    <div class="card-body">
+                     <h5 class="card-title">Donuts Clássico</h5>
+                     <p class="card-text truncate-3l">Um delicioso donuts açucarado.<p>
+                    </div>
+                    <div class="card-footer">
+                         <form class="d-block">
+                             <button class="btn btn-info">
+                                 Adicionar ao Carrinho
+                             </button>
+                         </form>
+                         <small class="text-black">20 unidades em estoque</small>
+                    </div>
+                </div>
+             </div> 
+        </div>
+        <hr class="mt-3">  
+        <div class="row pb-4">
+            <div class="col-12">
+                <div class="d-flex flex-row-reverse justify-content-center justify-content-md-start">
+                    <form class="ml-3 d-inline-block">
+                        <select class="form-select form-select-sm">
+                            <option>Ordernar pelo nome</option>
+                            <option>Ordernar pelo menor preço</option>
+                            <option>Ordernar pelo maior preço</option>
+                        </select>
+                    </form>
+                    <nav class="d-inline-block">
+                        <ul class="pagination pagination-sm my-0">
+                            <li class="page-item">
+                                <button class="page-link">1</button>
+                            </li>
+                            <li class="page-item">
+                                <button class="page-link">2</button>
+                            </li>
+                            <li class="page-item">
+                                <button class="page-link">3</button>
+                            </li>
+                            <li class="page-item">
+                                <button class="page-link">4</button>
+                            </li>
+                            <li class="page-item">
+                                <button class="page-link">5</button>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>     
+    </main>
+
+    <div style="height:273px;"  class="d-block d-md-none"></div>
+    <div style="height:153px;"  class="d-none d-md-block d-lg-none"></div>
+    <div style="height:129px;"  class="d-none d-lg-block"></div>
+
+    <footer class="border-top fixed-bottom text-muted bg-light >
+        <div class="container">
+            <div class="row py-3">
+                <div class="col-12 col-md-4 text-center text-md-left">
+                    &copy; 2021 - Donuts Online Ltda <br>
+                    Rua secreta, 007, Nárnia <br>
+                    CNPJ 99.999.999/0001-99
+                </div>
+                <div class="col-12 col-md-4 text-center ">
+                    <a href="privacidade.html" class="text-decoration-none text-dark">Política de Privacidade</a><br>
+                    <a href="termos.html" class="text-decoration-none text-dark">Termos de Uso</a><br>
+                    <a href="quemsomos.html" class="text-decoration-none text-dark">Quem Somos</a><br>
+                    <a href="trocas.html" class="text-decoration-none text-dark">Trocas e Devoluções</a>
+                </div>
+                <div class="col-12 col-md-4 text-center text-md-right">
+                    <a href="contatos.html" class="text-decoration-none text-dark">Contato pelo site</a><br>
+                    E-mail: <a href="" class="text-decoration-none text-dark">contato@domínio.com</a><br>
+                    Telefone: <a href="" class="text-decoration-none text-dark">(xx) 9  9999 - 9999</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- Popper.js first, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  </body>
+</html>
