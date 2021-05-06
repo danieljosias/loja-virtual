@@ -1,2 +1,3 @@
 # loja-virtual
-Criei uma loja virtual com 15 páginas usando bootstrap.
+Criei uma loja virtual de donuts que contém 15 páginas 
+e o framework utilizado foi o bootstrap.
